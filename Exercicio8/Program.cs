@@ -5,8 +5,8 @@ List<Produto> produtos = new List<Produto>()
     new Produto() {Nome = "Clips", Preco = 3.95M},
     new Produto() {Nome = "Caneta", Preco = 5.99M},
     new Produto() {Nome = "Lápis", Preco = 4.15M},
-    new Produto() {Nome = "Estojo", Preco = 6.99M},
-    new Produto() {Nome = "Caderno", Preco = 7.55M}
+    new Produto() {Nome = "Caderno", Preco = 7.55M},
+    new Produto() {Nome = "Estojo", Preco = 6.99M}
 
 };
 
@@ -30,4 +30,14 @@ for (int i = 0; i < listaOrdenada.Count; i++)
     }
 }
 
-//Falta Localiza o item "estojo" na lista
+for (int i = 0; i < listaOrdenada.Count; i++)
+{
+    if (listaOrdenada[i].Nome == "Estojo")
+    {
+        Console.WriteLine("Foi encontrado \"Estojo\" na lista");
+        break;
+    }
+    if (i == listaOrdenada.Count - 1)
+        Console.WriteLine("Não foi encontrado \"Estojo\" na lista");
+}
+Console.WriteLine();
